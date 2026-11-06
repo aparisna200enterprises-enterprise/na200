@@ -19,7 +19,7 @@ const coreValues = [
 export default function AboutPage() {
   return <PageFrame>
     <main>
-      <section className="page-intro" data-reveal>
+      <section className="page-intro">
         <div className="container">
           <h1>About Us</h1>
           <p className="about-page-lead">NA200 Enterprises is a growing company serving clients in the Philippines through security, fire protection, telecommunication, civil, structural, and technology solutions.</p>
@@ -27,7 +27,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="section about-page-section" data-reveal>
+      <section className="section about-page-section">
         <div className="container">
           <section className="about-page-block">
             <h2>Company Profile</h2>

@@ -38,7 +38,7 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
 
 function ProjectDetailFallback() {
   return <main>
-    <section className="section project-gallery-section" data-reveal>
+    <section className="section project-gallery-section">
       <div className="container project-detail-loading">Loading project gallery...</div>
     </section>
   </main>;
@@ -53,7 +53,7 @@ async function ProjectDetailContent({ params }: ProjectPageProps) {
   }
 
   return <main>
-      <section className="section project-gallery-section" data-reveal>
+      <section className="section project-gallery-section">
         <div className="container">
           <Link className="button button-outline project-gallery-back" href="/#projects">Back to home</Link>
           <div className="project-gallery-heading">

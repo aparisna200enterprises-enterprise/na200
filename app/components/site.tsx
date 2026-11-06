@@ -78,7 +78,7 @@ export function ServiceCards({ limit }: { limit?: number } = {}) {
 }
 
 export function PartnerLogos() {
-  return <section className="section partners-section" aria-labelledby="partners-title" data-reveal>
+  return <section className="section partners-section" aria-labelledby="partners-title">
     <div className="container partners-layout">
       <div className="partners-copy">
         <h2 id="partners-title">Our Partners</h2>
@@ -115,11 +115,11 @@ export function HomePage() {
         </div>
       </section>
 
-      <div className="container page-rule" data-reveal><span>NA200 ENTERPRISES</span><span>DESIGN & BUILD / ENGINEERING / STRUCTURAL / ARCHITECTURAL</span></div>
+      <div className="container page-rule"><span>NA200 ENTERPRISES</span><span>DESIGN & BUILD / ENGINEERING / STRUCTURAL / ARCHITECTURAL</span></div>
 
       <PartnerLogos />
 
-      <section id="about" className="section about-preview" data-reveal>
+      <section id="about" className="section about-preview">
         <div className="container about-editorial">
           <div className="about-overview">
             <h2>About Us</h2>
@@ -140,9 +140,9 @@ export function HomePage() {
         </div>
       </section>
 
-      <section id="services" className="section section-dark services-section" data-reveal><div className="container"><SectionHeading title="SERVICES" text="One stop shop." dark /><ServiceCards /></div></section>
+      <section id="services" className="section section-dark services-section"><div className="container"><SectionHeading title="SERVICES" text="One stop shop." dark /><ServiceCards /></div></section>
 
-      <section className="image-feature image-feature-integrated" aria-labelledby="integrated-systems-title" data-reveal>
+      <section className="image-feature image-feature-integrated" aria-labelledby="integrated-systems-title">
         <div className="image-feature-media"><Image src="/images/na200/pdf/integrated-systems-hd.webp" alt="Technician installing a security camera" fill sizes="100vw" /></div>
         <div className="container image-feature-content">
           <div className="image-feature-copy">
@@ -153,9 +153,9 @@ export function HomePage() {
         </div>
       </section>
 
-      <section id="projects" className="section projects-preview" data-reveal><div className="container"><div className="section-heading-row"><SectionHeading title="PROJECTS" text="Explore every project category and its full Wix gallery." /></div><ProjectGallery /></div></section>
+      <section id="projects" className="section projects-preview"><div className="container"><div className="section-heading-row"><SectionHeading title="PROJECTS" text="Explore every project category and its full Wix gallery." /></div><ProjectGallery /></div></section>
 
-      <section className="image-feature image-feature-projects" aria-labelledby="project-experience-title" data-reveal>
+      <section className="image-feature image-feature-projects" aria-labelledby="project-experience-title">
         <div className="image-feature-media"><Image src="/images/na200/pdf/tower-erection-experience-hd.webp" alt="Telecommunication tower erection work" fill sizes="100vw" /></div>
         <div className="container image-feature-content">
           <div className="image-feature-copy">
@@ -167,7 +167,7 @@ export function HomePage() {
         </div>
       </section>
 
-      <section id="contact" className="section contact-section" data-reveal><div className="container contact-grid"><div className="contact-details"><h2>CONTACT US!</h2><p>Do you have a project in mind? Get in touch today and let our licensed experts help get the job done right!</p><p className="contact-note">For job application, kindly submit a cover letter together with your C.V. to this email.</p><a className="contact-email" href="mailto:norman_aparis@yahoo.com">norman_aparis@yahoo.com</a><div className="contact-list"><a href="tel:09062472464">0906 247 2464</a><a href="tel:09080800022">0908 080 0022</a><a href="tel:09334983174">0933 498 3174</a><address>#17 EDSA Cor. Pantaleon Ext.<br />Brgy. Ilaya, Barangka<br />Mandaluyong City</address></div></div><ContactForm /></div></section>
+      <section id="contact" className="section contact-section"><div className="container contact-grid"><div className="contact-details"><h2>CONTACT US!</h2><p>Do you have a project in mind? Get in touch today and let our licensed experts help get the job done right!</p><p className="contact-note">For job application, kindly submit a cover letter together with your C.V. to this email.</p><a className="contact-email" href="mailto:norman_aparis@yahoo.com">norman_aparis@yahoo.com</a><div className="contact-list"><a href="tel:09062472464">0906 247 2464</a><a href="tel:09080800022">0908 080 0022</a><a href="tel:09334983174">0933 498 3174</a><address>#17 EDSA Cor. Pantaleon Ext.<br />Brgy. Ilaya, Barangka<br />Mandaluyong City</address></div></div><ContactForm /></div></section>
     </main>
   </PageFrame>;
 }
