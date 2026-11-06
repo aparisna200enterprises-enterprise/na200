@@ -11,13 +11,11 @@ export type Project = {
   gallery: GalleryImage[];
 };
 
-function wixGallery(slug: string, count: number, extensions: Record<number, string> = {}): GalleryImage[] {
+function wixGallery(slug: string, count: number): GalleryImage[] {
   return Array.from({ length: count }, (_, index) => {
     const number = index + 1;
     const paddedNumber = String(number).padStart(2, "0");
-    const extension = extensions[number] ?? "jpg";
-
-    return { image: `/images/na200/projects/galleries/${slug}/${paddedNumber}.${extension}` };
+    return { image: `/images/na200/projects/galleries/${slug}/${paddedNumber}.webp` };
   });
 }
 
@@ -27,7 +25,7 @@ export const projects: Project[] = [
     slug: "scaffolding-erection",
     title: "Scaffolding Erection",
     category: "Scaffolding",
-    image: "/images/na200/projects/project-01-hd.png",
+    image: "/images/na200/projects/project-01-hd.webp",
     gallery: wixGallery("scaffolding-erection", 12),
   },
   {
@@ -35,7 +33,7 @@ export const projects: Project[] = [
     slug: "fitout-painting",
     title: "Fitout Painting",
     category: "Fitout",
-    image: "/images/na200/projects/project-02-hd.png",
+    image: "/images/na200/projects/project-02-hd.webp",
     gallery: wixGallery("fitout-painting", 10),
   },
   {
@@ -43,7 +41,7 @@ export const projects: Project[] = [
     slug: "housing-land-development",
     title: "Housing Projects & Land Development",
     category: "Housing",
-    image: "/images/na200/projects/project-03-hd.png",
+    image: "/images/na200/projects/project-03-hd.webp",
     gallery: wixGallery("housing-land-development", 12),
   },
   {
@@ -51,7 +49,7 @@ export const projects: Project[] = [
     slug: "cctv-installation",
     title: "CCTV Installation",
     category: "CCTV",
-    image: "/images/na200/projects/project-04-hd.png",
+    image: "/images/na200/projects/project-04-hd.webp",
     gallery: wixGallery("cctv-installation", 10),
   },
   {
@@ -59,7 +57,7 @@ export const projects: Project[] = [
     slug: "fdas",
     title: "Fire Detection and Alarm System",
     category: "Fire Protection",
-    image: "/images/na200/projects/project-05-hd.png",
+    image: "/images/na200/projects/project-05-hd.webp",
     gallery: wixGallery("fdas", 12),
   },
   {
@@ -67,7 +65,7 @@ export const projects: Project[] = [
     slug: "sprinkler-system",
     title: "Sprinkler System",
     category: "Fire Protection",
-    image: "/images/na200/projects/project-06-hd.png",
+    image: "/images/na200/projects/project-06-hd.webp",
     gallery: wixGallery("sprinkler-system", 14),
   },
   {
@@ -75,7 +73,7 @@ export const projects: Project[] = [
     slug: "electrical-cabling",
     title: "Electrical Cabling",
     category: "Electrical",
-    image: "/images/na200/projects/project-07-hd.png",
+    image: "/images/na200/projects/project-07-hd.webp",
     gallery: wixGallery("electrical-cabling", 14),
   },
   {
@@ -83,15 +81,15 @@ export const projects: Project[] = [
     slug: "tower-erection",
     title: "Tower Erection",
     category: "Tower",
-    image: "/images/na200/projects/project-08-hd.png",
-    gallery: wixGallery("tower-erection", 12, { 3: "png", 7: "png", 12: "png" }),
+    image: "/images/na200/projects/project-08-hd.webp",
+    gallery: wixGallery("tower-erection", 12),
   },
   {
     number: "09",
     slug: "waterproofing",
     title: "Painting & Waterproofing",
     category: "Waterproofing",
-    image: "/images/na200/projects/project-09-hd.png",
+    image: "/images/na200/projects/project-09-hd.webp",
     gallery: wixGallery("waterproofing", 14),
   },
 ];

@@ -2,6 +2,7 @@ import "./globals.css";
 
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { PageLoader } from "./components/page-loader";
 
 const deploymentUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL ?? process.env.VERCEL_URL;
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? (deploymentUrl ? `https://${deploymentUrl}` : "http://localhost:3000");
@@ -29,13 +30,13 @@ export const metadata: Metadata = {
     siteName: "NA200 Enterprises",
     title: siteTitle,
     description: siteDescription,
-    images: [{ url: "/images/na200/hero-hd.png", alt: "Construction and engineering work by NA200 Enterprises" }],
+    images: [{ url: "/images/na200/hero-hd.webp", alt: "Construction and engineering work by NA200 Enterprises" }],
   },
   twitter: {
     card: "summary_large_image",
     title: siteTitle,
     description: siteDescription,
-    images: ["/images/na200/hero-hd.png"],
+    images: ["/images/na200/hero-hd.webp"],
   },
   robots: { index: true, follow: true },
 };
@@ -46,8 +47,8 @@ const organizationJsonLd = {
   "@id": `${siteUrl}/#organization`,
   name: "NA200 Enterprises",
   url: siteUrl,
-  logo: `${siteUrl}/images/na200/logo-no-line-hd.png`,
-  image: `${siteUrl}/images/na200/hero-hd.png`,
+  logo: `${siteUrl}/images/na200/logo-no-line-hd.webp`,
+  image: `${siteUrl}/images/na200/hero-hd.webp`,
   description: siteDescription,
   email: "norman_aparis@yahoo.com",
   telephone: "+63 906 247 2464",
@@ -67,6 +68,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en" className={inter.variable}>
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }} />
+        <PageLoader />
         {children}
       </body>
     </html>
