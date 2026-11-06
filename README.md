@@ -16,9 +16,15 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Production configuration
+
+Copy `.env.example` to `.env.local` and set `NEXT_PUBLIC_SITE_URL` before deployment so canonical metadata, Open Graph URLs, `sitemap.xml`, and `robots.txt` use the production domain.
+
+The contact form sends through Resend when `RESEND_API_KEY` and a verified `RESEND_FROM_EMAIL` are configured. Without those values, it provides a mail-app fallback instead of silently failing.
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load Inter for the corporate interface.
 
 ## Learn More
 
