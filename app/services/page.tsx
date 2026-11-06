@@ -10,13 +10,13 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return <PageFrame>
     <main>
-      <section className="page-intro">
+      <section className="page-intro" data-reveal>
         <div className="container">
           <SectionHeading as="h1" title="SERVICES" text="Explore the complete NA200 Enterprises service offering." />
           <Link className="button button-light" href="/">Back to home</Link>
         </div>
       </section>
-      <section className="section services-page-section">
+      <section className="section services-page-section" data-reveal>
         <div className="container">
           <ServiceCards />
           <article className="service-source-detail">
