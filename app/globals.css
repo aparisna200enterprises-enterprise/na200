@@ -235,7 +235,7 @@ h3 { margin-bottom: 10px; font-size: var(--type-title-xs); line-height: 28px; le
 .footer-bottom { display: flex; justify-content: space-between; gap: 20px; padding-top: 18px; border-top: 1px solid #2c333a; color: #6e7881; font-size: 11px; }
 
 .site-loader { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; background: #fff; animation: loader-exit .65s cubic-bezier(.76,0,.24,1) 1.7s forwards; }
-.site-loader-logo { position: relative; width: min(320px, 72vw); overflow: hidden; transform: translateY(-10px); }
+.site-loader-logo { position: relative; width: min(320px, 72vw); overflow: hidden; transform: translateY(-20px); }
 .site-loader-logo img { display: block; width: 100%; height: auto; animation: loader-logo-in .45s ease both; }
 .site-loader-logo::after { position: absolute; inset: -20% auto -20% -55%; width: 32%; background: linear-gradient(90deg, transparent, rgba(255,255,255,.9), transparent); content: ""; mix-blend-mode: screen; pointer-events: none; transform: skewX(-16deg); animation: logo-shine 1.2s ease-in-out .45s 1 both; }
 
@@ -326,8 +326,8 @@ h3 { margin-bottom: 10px; font-size: var(--type-title-xs); line-height: 28px; le
   h2 { font-size: 32px; }
   .hero-actions { align-items: flex-start; flex-direction: column; gap: 16px; }
   .hero-actions .button { width: min(168px, 100%); }
-  .hero { min-height: 520px; }
-  .hero-content { min-height: 520px; padding: 42px 0; }
+  .hero { min-height: 560px; }
+  .hero-content { min-height: 560px; padding: 48px 0; }
   .hero-panel { width: 100%; }
   .hero-title-primary { font-size: clamp(32px, 10vw, 40px); white-space: normal; }
   .hero-title-secondary { margin-top: 8px; font-size: clamp(16px, 4.2vw, 20px); line-height: 1.25; }
@@ -359,8 +359,8 @@ h3 { margin-bottom: 10px; font-size: var(--type-title-xs); line-height: 28px; le
   .header-inner { min-height: 60px; }
   .brand img { width: 100px; }
   .main-nav { top: 60px; right: 12px; left: 12px; }
-  .hero { min-height: 540px; }
-  .hero-content { min-height: 540px; padding: 42px 0; }
+  .hero { min-height: 580px; }
+  .hero-content { min-height: 580px; padding: 48px 0; }
   .hero-panel h1 { margin-bottom: 18px; }
   .hero-panel p { font-size: 13px; line-height: 21px; }
   .hero-actions .button { width: min(160px, 100%); }

@@ -1,6 +1,6 @@
 import "./globals.css";
 
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import { PageLoader } from "./components/page-loader";
 
@@ -39,6 +39,11 @@ export const metadata: Metadata = {
     images: ["/images/na200/hero-hd.webp"],
   },
   robots: { index: true, follow: true },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 const organizationJsonLd = {
