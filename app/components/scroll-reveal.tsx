@@ -22,10 +22,10 @@ export function ScrollReveal() {
         entry.target.classList.add("is-visible");
         observer.unobserve(entry.target);
       });
-    }, { rootMargin: "0px 0px -10% 0px", threshold: 0.08 });
+    }, { rootMargin: "0px 0px -5% 0px", threshold: 0.12 });
 
     targets.forEach((target, index) => {
-      target.style.setProperty("--reveal-delay", `${Math.min(index * 35, 210)}ms`);
+      target.style.setProperty("--reveal-delay", `${Math.min(index * 12, 60)}ms`);
       observer.observe(target);
     });
 

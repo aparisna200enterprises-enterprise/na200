@@ -29,7 +29,7 @@ export default function AboutPage() {
 
       <section className="section about-page-section" data-reveal>
         <div className="container">
-          <section className="about-page-block" data-reveal>
+          <section className="about-page-block">
             <h2>Company Profile</h2>
             <div className="about-page-copy">
               <p>NA200 Enterprises is a growing company consisting of competent and highly trained professional consultants, industry practitioners, and IT-certified engineers experienced in rendering business consulting services in major industries in the Philippines.</p>
@@ -38,7 +38,7 @@ export default function AboutPage() {
             </div>
           </section>
 
-          <section className="about-page-block" data-reveal>
+          <section className="about-page-block">
             <h2>Early Beginning</h2>
             <div className="about-page-copy">
               <p>NA200 Enterprises pioneered as a major provider of sales and installation for security systems, communication gadgets, CCTV, and other personal protection devices in the Philippines.</p>
@@ -47,7 +47,7 @@ export default function AboutPage() {
             </div>
           </section>
 
-          <section className="about-page-block" data-reveal>
+          <section className="about-page-block">
             <h2>Company Advantage</h2>
             <div className="about-page-copy">
               <p>NA200 Enterprises is known in the industry as an expert specialist in advanced digital video surveillance systems, telecommunication, fire protection, and civil and structural works.</p>
@@ -56,7 +56,7 @@ export default function AboutPage() {
             </div>
           </section>
 
-          <section className="about-page-block" data-reveal>
+          <section className="about-page-block">
             <h2>Our Mission</h2>
             <div className="about-page-copy">
               <p>To promote the best and affordable security safety for fire protection and telecommunication systems, as well as cabling systems, structural and civil works through the most recent technologies available in the world today.</p>
@@ -68,14 +68,14 @@ export default function AboutPage() {
             </div>
           </section>
 
-          <section className="about-page-block" data-reveal>
+          <section className="about-page-block">
             <h2>Our Vision</h2>
             <div className="about-page-copy">
               <p>We aim to locally support and represent leading security solutions, fire protection, telecommunication and technology system manufacturers, together with structural and civil work innovations in the world.</p>
             </div>
           </section>
 
-          <section className="about-page-block" data-reveal>
+          <section className="about-page-block">
             <h2>Core Values</h2>
             <div className="value-grid">
               {coreValues.map((value) => <article className="value-item" key={value.title}>

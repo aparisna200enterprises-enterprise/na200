@@ -7,7 +7,7 @@ export function ProjectGallery() {
 
   return <>
     <div className="project-grid">
-      {visibleProjects.map((project, index) => <Link className={`project-card project-card-${(index % 4) + 1}`} data-reveal href={`/projects/${project.slug}`} key={project.slug} aria-label={`View ${project.title} project gallery`}>
+      {visibleProjects.map((project, index) => <Link className={`project-card project-card-${(index % 4) + 1}`} href={`/projects/${project.slug}`} key={project.slug} aria-label={`View ${project.title} project gallery`}>
         <div className="project-image">
           <Image src={project.image} alt={project.title} fill sizes="(max-width: 768px) 100vw, 33vw" />
           <div className="project-caption">
