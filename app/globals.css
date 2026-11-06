@@ -21,10 +21,10 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; overflow-x: clip; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 html.is-loading, html.is-loading body { overflow: hidden; }
 section[id] { scroll-margin-top: 82px; }
-body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-inter), Arial, Helvetica, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: clip; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-inter), Arial, Helvetica, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 a { color: inherit; text-decoration: none; }
 button, input, textarea { font: inherit; }
 button { cursor: pointer; }
@@ -72,7 +72,7 @@ h3 { margin-bottom: 10px; font-size: var(--type-title-xs); line-height: 28px; le
 .text-link:hover { color: var(--red); }
 .hero-meta { display: flex; gap: 22px; margin-top: 62px; padding-top: 18px; border-top: 1px solid #d3d7da; color: var(--muted); font-size: 12px; line-height: 1.5; }
 .hero-meta span:first-child { color: var(--red); font-size: 10px; line-height: 14px; font-weight: 600; letter-spacing: 1px; }
-.hero-media { position: absolute; top: 0; left: 50%; width: 100vw; height: 100%; min-height: 0; overflow: hidden; background: #d8d7d2; transform: translateX(-50%); }
+.hero-media { position: absolute; top: 0; left: 0; width: 100%; height: 100%; min-height: 0; overflow: hidden; background: #d8d7d2; }
 .hero-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(103,14,20,.94) 0%, rgba(153,19,26,.78) 34%, rgba(205,25,32,.38) 64%, rgba(226,27,35,.08) 100%), linear-gradient(0deg, rgba(75,10,15,.2), transparent 60%); pointer-events: none; }
 .hero-media img { width: 100% !important; height: 100% !important; object-fit: cover; object-position: center 48%; animation: hero-media-in .9s ease both; }
 .hero-content { position: relative; z-index: 1; display: flex; min-height: 520px; align-items: center; justify-content: flex-start; padding: 56px 0; color: white; }
@@ -189,7 +189,7 @@ h3 { margin-bottom: 10px; font-size: var(--type-title-xs); line-height: 28px; le
 .contact-list a:hover { color: var(--red); }
 .contact-list address { margin-top: 14px; font-style: normal; }
 .contact-form { padding: 28px 30px; background: var(--soft); }
-.contact-honeypot { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.contact-form .contact-honeypot { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .contact-form label { display: grid; gap: 7px; margin-bottom: 17px; }
 .contact-form label span { color: #4d555c; font-size: var(--type-body-xs); line-height: 16px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
 .contact-form input, .contact-form textarea { width: 100%; border: 1px solid #d4d9dd; background: white; padding: 11px 13px; color: var(--ink); outline: none; resize: vertical; }
