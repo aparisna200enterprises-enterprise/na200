@@ -7,7 +7,7 @@ import { PageLoader } from "./components/page-loader";
 const deploymentUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL ?? process.env.VERCEL_URL;
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? (deploymentUrl ? `https://${deploymentUrl}` : "http://localhost:3000");
 const siteTitle = "NA200 Enterprises | Design, Build & Engineering";
-const siteDescription = "NA200 Enterprises provides design and build, engineering, structural, architectural, fire protection, telecommunication, plumbing, electrical, and CCTV solutions.";
+const siteDescription = "NA200 Enterprises provides design and build, engineering, structural, architectural, fire protection, telecommunication, plumbing, electrical, CCTV, renewable energy, kitchen fire suppression, elevator installation, and scaffolding solutions.";
 
 const inter = Inter({
   display: "swap",
@@ -65,7 +65,7 @@ const organizationJsonLd = {
     addressCountry: "PH",
   },
   areaServed: "Mandaluyong City, Metro Manila, Philippines",
-  knowsAbout: ["Design and build", "Engineering", "Structural work", "Architectural work", "Fire protection", "Telecommunication tower erection", "Plumbing", "Electrical", "CCTV"],
+  knowsAbout: ["Design and build", "Engineering", "Structural work", "Architectural work", "Fire protection / FDAS", "Telecommunication tower erection", "Plumbing / AFSS", "Electrical", "CCTV", "Renewable energy and solar systems", "Kitchen fire suppression", "Elevator installation", "Scaffolding erection"],
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

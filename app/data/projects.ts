@@ -92,4 +92,20 @@ export const projects: Project[] = [
     image: "/images/na200/projects/project-09-hd.webp",
     gallery: wixGallery("waterproofing", 14),
   },
+  {
+    number: "10",
+    slug: "renewable-solar-systems",
+    title: "Renewable Energy & Solar Systems",
+    category: "Renewable Energy",
+    image: "/images/na200/projects/galleries/renewable-solar/01.webp",
+    gallery: wixGallery("renewable-solar", 10),
+  },
+  {
+    number: "11",
+    slug: "kitchen-hood-fire-suppression",
+    title: "Kitchen Hood Fire Suppression",
+    category: "Fire Protection",
+    image: "/images/na200/projects/galleries/kitchen-hood-fire-suppression/01.webp",
+    gallery: wixGallery("kitchen-hood-fire-suppression", 10),
+  },
 ];

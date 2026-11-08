@@ -4,7 +4,7 @@ import { PageFrame, SectionHeading, ServiceCards } from "../components/site";
 
 export const metadata: Metadata = {
   title: "Services",
-  description: "Explore the full NA200 Enterprises service offering, including design and build, engineering, structural, architectural, fire protection, tower erection, plumbing, electrical, and CCTV work.",
+  description: "Explore the full NA200 Enterprises service offering, including design and build, engineering, structural, architectural, fire protection, tower erection, plumbing, electrical, CCTV, renewable energy, kitchen fire suppression, elevator installation, and scaffolding erection.",
 };
 
 export default function ServicesPage() {

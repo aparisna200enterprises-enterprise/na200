@@ -18,6 +18,8 @@ const partnerLogos = [
   { name: "Simplex", src: "/images/na200/partners/simplex.png", width: 288, height: 128 },
   { name: "Orena", src: "/images/na200/partners/orena.png", width: 375, height: 100 },
   { name: "Notifier by Honeywell", src: "/images/na200/partners/notifier.png", width: 474, height: 154 },
+  { name: "Solis", src: "/images/na200/partners/solis.png", width: 166, height: 60 },
+  { name: "LUTIAN", src: "/images/na200/partners/lutian.png", width: 1607, height: 444 },
 ];
 
 export function SiteFooter() {
@@ -109,7 +111,7 @@ export function HomePage() {
         <div className="container hero-content">
           <div className="hero-panel">
             <h1><span className="hero-title-primary">ONE STOP SHOP</span><span className="hero-title-secondary">FOR DESIGN, BUILD &amp; ENGINEERING</span></h1>
-            <p>Design &amp; Build · Engineering · Structural · Architectural · Telecommunication Tower Erection · FDAS · Sprinkler System · Plumbing · Electrical · CCTV</p>
+            <p>Design &amp; Build · Engineering · Structural · Architectural · Telecommunication Tower Erection · Fire Protection / FDAS · Plumbing / AFSS · Electrical · CCTV · Renewable Energy / Solar Systems · Kitchen Fire Suppression · Elevator Installation · Scaffolding Erection</p>
             <div className="hero-actions"><a className="button button-light" href="#contact">Contact us</a><a className="button button-hero-outline" href="#projects">View projects</a></div>
           </div>
         </div>
