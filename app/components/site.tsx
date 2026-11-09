@@ -20,7 +20,7 @@ const partnerLogos = [
   { name: "Notifier by Honeywell", src: "/images/na200/partners/notifier.png", width: 474, height: 154 },
   { name: "Solis", src: "/images/na200/partners/solis.png", width: 166, height: 60 },
   { name: "LUTIAN", src: "/images/na200/partners/lutian.png", width: 1607, height: 444 },
-  { name: "ERA Solar", src: "/images/na200/partners/era-solar.png", width: 1279, height: 442 },
+  { name: "ERA Solar", src: "/images/na200/partners/era-solar.png", width: 1279, height: 442, preserveContrast: true },
 ];
 
 export function SiteFooter() {
@@ -95,6 +95,7 @@ export function PartnerLogos() {
               width={partner.width}
               height={partner.height}
               sizes="(max-width: 580px) 38vw, 140px"
+              className={partner.preserveContrast ? "partner-logo-image partner-logo-image--contrast" : "partner-logo-image"}
               quality={100}
               unoptimized
             />
