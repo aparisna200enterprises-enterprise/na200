@@ -5,6 +5,12 @@ import { FormEvent, useState } from "react";
 export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "fallback" | "error">("idle");
 
+  function openMailto(data: FormData) {
+    const subject = encodeURIComponent(`Project inquiry from ${data.get("name") || "website visitor"}`);
+    const body = encodeURIComponent(`Name: ${data.get("name")}\nEmail: ${data.get("email")}\nPhone: ${data.get("phone")}\nAddress: ${data.get("address")}\nSubject: ${data.get("subject")}\n\nProject details:\n${data.get("message")}`);
+    window.location.href = `mailto:norman_aparis@yahoo.com?subject=${subject}&body=${body}`;
+  }
+
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const form = event.currentTarget;
@@ -21,9 +27,7 @@ export function ContactForm() {
       const result = await response.json() as { ok?: boolean; fallback?: boolean };
 
       if (result.fallback) {
-        const subject = encodeURIComponent(`Project inquiry from ${data.get("name") || "website visitor"}`);
-        const body = encodeURIComponent(`Name: ${data.get("name")}\nEmail: ${data.get("email")}\nPhone: ${data.get("phone")}\nAddress: ${data.get("address")}\nSubject: ${data.get("subject")}\n\nProject details:\n${data.get("message")}`);
-        window.location.href = `mailto:norman_aparis@yahoo.com?subject=${subject}&body=${body}`;
+        openMailto(data);
         setStatus("fallback");
         return;
       }
@@ -33,7 +37,8 @@ export function ContactForm() {
       form.reset();
       setStatus("success");
     } catch {
-      setStatus("error");
+      openMailto(data);
+      setStatus("fallback");
     }
   }
 

@@ -22,6 +22,19 @@ Copy `.env.example` to `.env.local` and set `NEXT_PUBLIC_SITE_URL` before deploy
 
 The contact form sends through Resend when `RESEND_API_KEY` and a verified `RESEND_FROM_EMAIL` are configured. Without those values, it provides a mail-app fallback instead of silently failing.
 
+## Cloudflare Pages with GitHub
+
+This project is configured as a static Next.js export for Cloudflare Pages. In Cloudflare, choose Workers & Pages → Create application → Pages → Import an existing Git repository, then select the GitHub repository.
+
+Use these build settings:
+
+- Framework preset: `Next.js (Static HTML Export)`
+- Production branch: `main`
+- Build command: `npx next build`
+- Build directory: `out`
+
+Set `NEXT_PUBLIC_SITE_URL` in the Pages production environment to the final `pages.dev` or custom-domain URL. Pages serves the static site; the contact form opens a prefilled email in the visitor's mail app because the server-side `/api/contact` route is not included in a static export.
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load Inter for the corporate interface.
