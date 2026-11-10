@@ -108,4 +108,12 @@ export const projects: Project[] = [
     image: "/images/na200/projects/galleries/kitchen-hood-fire-suppression/01.webp",
     gallery: wixGallery("kitchen-hood-fire-suppression", 10),
   },
+  {
+    number: "12",
+    slug: "elevator-installation",
+    title: "Elevator Installation",
+    category: "Elevator",
+    image: "/images/na200/projects/galleries/elevator-installation/06.webp",
+    gallery: wixGallery("elevator-installation", 9),
+  },
 ];
