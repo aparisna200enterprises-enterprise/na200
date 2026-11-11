@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageFrame, SectionHeading, ServiceCards } from "../components/site";
+import { createPageMetadata } from "../site-config";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Services",
-  description: "Explore the full NA200 Enterprises service offering, including design and build, engineering, structural, architectural, fire protection, tower erection, plumbing, electrical, CCTV, renewable energy, kitchen fire suppression, elevator installation, and scaffolding erection.",
-};
+  description: "Explore NA200 Enterprises design-build, structural, fire protection, CCTV, electrical, plumbing, telecom, solar, elevator, and scaffolding services in Metro Manila.",
+  path: "/services",
+});
 
 export default function ServicesPage() {
   return <PageFrame>

@@ -18,9 +18,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Production configuration
 
-Copy `.env.example` to `.env.local` and set `NEXT_PUBLIC_SITE_URL` before deployment so canonical metadata, Open Graph URLs, `sitemap.xml`, and `robots.txt` use the production domain.
+Copy `.env.example` to `.env.local` and set `NEXT_PUBLIC_SITE_URL` before deployment so canonical metadata, Open Graph URLs, `sitemap.xml`, `robots.txt`, and structured data use `https://na200enterprises.com`.
 
-The contact form sends through Resend when `RESEND_API_KEY` and a verified `RESEND_FROM_EMAIL` are configured. Without those values, it provides a mail-app fallback instead of silently failing.
+The contact form posts directly to Formspree and shows success or error feedback in the page without redirecting visitors away from the site.
 
 ## Cloudflare Pages with GitHub
 
@@ -33,7 +33,7 @@ Use these build settings:
 - Build command: `npx next build`
 - Build directory: `out`
 
-Set `NEXT_PUBLIC_SITE_URL` in the Pages production environment to the final `pages.dev` or custom-domain URL. Pages serves the static site; the contact form opens a prefilled email in the visitor's mail app because the server-side `/api/contact` route is not included in a static export.
+Set `NEXT_PUBLIC_SITE_URL=https://na200enterprises.com` in the Pages production environment. Configure Cloudflare to redirect `www.na200enterprises.com` to the apex domain so one canonical host is indexed. Pages serves the static site, and the contact form posts directly to Formspree without requiring a server-side API route.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 

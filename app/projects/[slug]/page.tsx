@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import { PageFrame } from "../../components/site";
 import { projects } from "../../data/projects";
+import { createPageMetadata } from "../../site-config";
 
 type ProjectPageProps = {
   params: Promise<{ slug: string }>;
@@ -19,13 +20,20 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
   const project = projects.find((item) => item.slug === slug);
 
   if (!project) {
-    return { title: "Project not found" };
+    return createPageMetadata({
+      title: "Project Not Found",
+      description: "The requested NA200 Enterprises project page could not be found.",
+      path: `/projects/${slug}`,
+    });
   }
 
-  return {
+  return createPageMetadata({
     title: project.title,
-    description: `${project.title} project gallery from NA200 Enterprises in Mandaluyong City and Metro Manila.`,
-  };
+    description: `${project.title} project gallery from NA200 Enterprises, a design-build and engineering contractor serving Mandaluyong and Metro Manila.`,
+    path: `/projects/${project.slug}`,
+    image: project.image,
+    imageAlt: `${project.title} project by NA200 Enterprises`,
+  });
 }
 
 export default function ProjectDetailPage({ params }: ProjectPageProps) {

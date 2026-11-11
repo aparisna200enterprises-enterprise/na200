@@ -1,9 +1,7 @@
 import type { MetadataRoute } from "next";
+import { siteUrl } from "./site-config";
 
 export const dynamic = "force-static";
-
-const deploymentUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL ?? process.env.VERCEL_URL;
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? (deploymentUrl ? `https://${deploymentUrl}` : "http://localhost:3000");
 
 export default function robots(): MetadataRoute.Robots {
   return {

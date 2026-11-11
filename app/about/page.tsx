@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageFrame } from "../components/site";
+import { createPageMetadata } from "../site-config";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "About Us",
-  description: "Learn about NA200 Enterprises, its history, technical expertise, company advantage, mission, vision, and core values in the Philippines.",
-};
+  description: "Learn about NA200 Enterprises, a Mandaluyong design-build and engineering contractor serving Metro Manila since 2001.",
+  path: "/about",
+});
 
 const coreValues = [
   { title: "Integrity", text: "Our business conduct includes the highest level of honesty, ethics, and moral correctness. We will not compromise our employees, customers, or company." },
